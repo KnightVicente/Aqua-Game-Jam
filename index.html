@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshwater Game Jam</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const deadline = new Date("2025-04-28T23:59:59").getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const timeLeft = deadline - now;
+
+                if (timeLeft > 0) {
+                    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                    document.getElementById("timer").textContent = 
+                        `${days}d | ${hours}h | ${minutes}m | ${seconds}s`;
+                } else {
+                    document.getElementById("timer").textContent = "Submission Closed!";
+                    clearInterval(countdownInterval);
+                }
+            }
+
+            const countdownInterval = setInterval(updateCountdown, 1000);
+            updateCountdown();
+        });
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Freshwater Game Jam</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#speakers">Speakers & Judges</a></li>
+                <li><a href="#venue">Venue & Schedule</a></li>
+                <li><a href="#registration">Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="hero">
+        <h2>Dive into Creativity!</h2>
+        <p>Join the Freshwater Game Jam, where developers, artists, and storytellers come together to create amazing games inspired by freshwater ecosystems.</p>
+        <a href="#registration" class="cta-button">Join Jam</a>
+        <p id="timer">Loading...</p>
+    </section>
+        
+    </section>
+    
+    <!-- About -->
+    <section id="about">
+        <h2>About the Jam</h2>
+        <p>The Freshwater Game Jam is an exciting challenge where participants create games based on the beauty and mysteries of freshwater environments. Whether you're an indie developer, student, or hobbyist, this jam is a chance to push your creativity, experiment with new mechanics, and collaborate with fellow game enthusiasts.</p>
+    </section>
+    
+    <!-- Speakers & Judges -->
+    <section id="speakers">
+        <h2>Speakers & Judges</h2>
+        <ul>
+            <li><strong>Alex Rivers</strong> – Indie Game Developer, creator of <em>AquaQuest</em></li>
+            <li><strong>Dr. Lily Wade</strong> – Marine Biologist & Gamification Expert</li>
+            <li><strong>Jordan Pike</strong> – Pixel Artist & Animator</li>
+        </ul>
+    </section>
+    
+    <!-- Venue & Schedule -->
+    <section id="venue">
+        <h2>Venue & Schedule</h2>
+        <p><strong>Venue:</strong> Online (Submissions via itch.io, communication via Discord)</p>
+        <ul>
+            <li><strong>Day 1:</strong> Theme reveal, team formation, and kickoff</li>
+            <li><strong>Day 2:</strong> Development phase, mentoring sessions</li>
+            <li><strong>Day 3:</strong> Submission deadline, showcase, and judging</li>
+        </ul>
+    </section>
+    
+    <!-- Registration -->
+    <section id="registration">
+        <h2>Register Now</h2>
+        <p>Ready to make a splash? Sign up now to secure your spot in the Freshwater Game Jam!</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="team">Team Name (if applicable):</label>
+            <input type="text" id="team" name="team">
+            
+            <button type="submit">Join the Jam!</button>
+        </form>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Freshwater Game Jam. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

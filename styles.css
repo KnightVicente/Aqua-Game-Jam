@@ -1,0 +1,125 @@
+/* Reset / Normalize */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', cursive;
+    background: linear-gradient(to bottom, #84a98c  , #2f3e46);
+    color: #d1e8e2; /* Soft, pale water tone */
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Averia Libre', sans-serif;
+    color: #89c9b8; /* Prismarine-like green */
+}
+
+a {
+    color: #62a39f;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d1e8e2;
+}
+
+/* Layout */
+header {
+    background: #062626;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #d1e8e2;
+    font-weight: bold;
+}
+
+/* ------------- HERO ---------------*/
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 20vw;
+    background-color: #5a2f2f;
+
+}
+
+.cta-button {
+    display: inline-block;
+    background: #1e635c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background: #2a8473;
+    box-shadow: 0 0 20px #2a8473;
+    text-shadow: 0 0 5px #233d38;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ------------- ABOUT ---------------*/
+
+#about {
+    padding: 50px 30px;
+    margin: 0 20vw;
+    background-color: #5a2f2f;
+}
+
+
+/* ------------- SPEAKER ---------------*/
+#speakers {
+    padding: 50px 30px;
+    margin: 0 20vw;
+    background-color: #5a2f2f;
+}
+
+
+
+/* ------------- VENUE ---------------*/
+#venue {
+    padding: 50px 30px;
+    margin: 0 20vw;
+    background-color: #5a2f2f;
+}
+
+
+
+/* ------------- REGISTRATION ---------------*/
+#registration {
+    padding: 50px 30px;
+    margin: 0 20vw;
+    background-color: #5a2f2f;
+}
+
+/* ------------- FOOTER ---------------*/
+footer {
+    background: #062626;
+    text-align: center;
+}
