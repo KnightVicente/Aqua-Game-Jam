@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freshwater Game Jam</title>
+    <title>Aqua Game Jam</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const deadline = new Date("2025-04-28T23:59:59").getTime();
@@ -37,9 +38,9 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>Freshwater Game Jam</h1>
         <nav>
             <ul>
+                <li> <a href="index.html"><img src="assets/AquaJamLogo.png" alt="Aqua Game Jam Logo" id="logo-small"></a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#speakers">Speakers & Judges</a></li>
                 <li><a href="#venue">Venue & Schedule</a></li>
@@ -47,65 +48,110 @@
             </ul>
         </nav>
     </header>
-    
+
+    <img src ="assets/AquaJamHero2.png" alt="Aqua Game Jam Logo" id="logo">
     <!-- Hero Section -->
     <section id="hero">
-        <h2>Dive into Creativity!</h2>
-        <p>Join the Freshwater Game Jam, where developers, artists, and storytellers come together to create amazing games inspired by freshwater ecosystems.</p>
-        <a href="#registration" class="cta-button">Join Jam</a>
+        <h1>Welcome to Aqua Game Jam 2025!</h1>
+        <a href="">Hosted by Knight</a>
+        <p>Beneath the surface, forgotten rivers and shadowed lakes hold untold stories
+            <br>While oceans dominate games, the eerie beauty of freshwater worlds remains unexplored
+            <br>Aqua Game Jam invites you to dive into these hidden depths.</p><br>
+        <br>
+        <p>Submissions open until <b>April 28, 2025</b></p>
+        <a href="" class="join-button">Join Jam</a><br>
+        <p>Countdown to Submission Deadline:</p>
         <p id="timer">Loading...</p>
+        <hr> 
     </section>
-        
-    </section>
-    
+
     <!-- About -->
-    <section id="about">
+    <section id="about">  
         <h2>About the Jam</h2>
-        <p>The Freshwater Game Jam is an exciting challenge where participants create games based on the beauty and mysteries of freshwater environments. Whether you're an indie developer, student, or hobbyist, this jam is a chance to push your creativity, experiment with new mechanics, and collaborate with fellow game enthusiasts.</p>
+        <p><b>The goal</b> of the jam is to make the most unique, stylized, and fun game within the theme and submission deadline.<br></p>
+        <h3>Rules</h3>
+        <ul class="rules-list">
+            <li><span class="rule-icon">✔</span> You can work alone or in a team.</li>
+            <li><span class="rule-icon">✔</span> Use assets that you have the legal right to use.</li>
+            <li><span class="rule-icon">✔</span> You can use any engine you prefer.</li>
+            <li><span class="rule-icon">✔</span> Be kind. Don't crunch. Drink water. Sleep.</li>
+        </ul>
+        <h3>Theme</h3>
+        <img src="assets/ThemeCard.png" alt="Theme: BRACKISH" id="theme"><br>
+        <p><i>You may Interpret this theme in any way you see fit</i></p><br>
+        <hr>
     </section>
     
     <!-- Speakers & Judges -->
     <section id="speakers">
         <h2>Speakers & Judges</h2>
-        <ul>
-            <li><strong>Alex Rivers</strong> – Indie Game Developer, creator of <em>AquaQuest</em></li>
-            <li><strong>Dr. Lily Wade</strong> – Marine Biologist & Gamification Expert</li>
-            <li><strong>Jordan Pike</strong> – Pixel Artist & Animator</li>
-        </ul>
+        <img src="assets/AquaJamSmallCards.png" alt="Speakers & Judges"><br>
+        <hr>
     </section>
     
     <!-- Venue & Schedule -->
     <section id="venue">
         <h2>Venue & Schedule</h2>
-        <p><strong>Venue:</strong> Online (Submissions via itch.io, communication via Discord)</p>
-        <ul>
-            <li><strong>Day 1:</strong> Theme reveal, team formation, and kickoff</li>
-            <li><strong>Day 2:</strong> Development phase, mentoring sessions</li>
-            <li><strong>Day 3:</strong> Submission deadline, showcase, and judging</li>
-        </ul>
+        <h3>Venue:</h3>
+        <p>Online (Submissions above, Events take place via our <a href="">Discord</a>)</p>
+        <h3>Schedule:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>April 3rd</strong></td>
+                    <td>Jam Start - Same day kickoff event on our Discord!</td>
+                </tr>
+                <tr>
+                    <td><strong>April 28th</strong></td>
+                    <td>Jam End</td>
+                </tr>
+                <tr>
+                    <td><strong>April 29th & 30th</strong></td>
+                    <td>Let's Play Stream - Hosted on our Discord!</td>
+                </tr>
+                <tr>
+                    <td><strong>April 31st</strong></td>
+                    <td>Winners Announced</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <hr>
     </section>
     
     <!-- Registration -->
-    <section id="registration">
-        <h2>Register Now</h2>
-        <p>Ready to make a splash? Sign up now to secure your spot in the Freshwater Game Jam!</p>
-        <form>
+<section id="registration">
+    <h1>Register Now</h1>
+    <p>Don’t let the tide pass you by. Register to our mailing list for the latest updates on Aqua Game Jam, including upcoming events and key deadlines. Whether you're a developer, artist, or just curious about the jam, we’ll make sure you never miss a ripple.</p>
+    <br>
+    <form>
+        <div class="form-group">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="team">Team Name (if applicable):</label>
-            <input type="text" id="team" name="team">
-            
-            <button type="submit">Join the Jam!</button>
-        </form>
-    </section>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
+</section>
     
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Freshwater Game Jam. All Rights Reserved.</p>
+        <img src ="assets/Tagline.png" alt="STILL WATERS | WILD IDEAS">
+        <p>&copy; 2025 Aqua Game Jam. All Rights Reserved.</p>
+        <p>Contact us: <a href="mailto:info@aquagamejam.com">info@aquagamejam.com</a> | Phone: +1 (555) 123-4567</p>
+        <p>
+            <a href="">Terms and Conditions</a> | 
+            <a href="">Privacy Policy</a>
+        </p>
     </footer>
 </body>
 </html>

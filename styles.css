@@ -1,14 +1,18 @@
-/* Reset / Normalize */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior:smooth;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Raleway', cursive;
-    background: linear-gradient(to bottom, #84a98c  , #2f3e46);
-    color: #d1e8e2; /* Soft, pale water tone */
+    background: linear-gradient(to bottom, #467477  , #171f24);
+    color: #d1e8e2;
     line-height: 1.6;
     padding: 0;
     margin: 0;
@@ -17,7 +21,6 @@ body {
 /* Typography */
 h1, h2, h3 {
     font-family: 'Averia Libre', sans-serif;
-    color: #89c9b8; /* Prismarine-like green */
 }
 
 a {
@@ -29,22 +32,49 @@ a:hover {
     color: #d1e8e2;
 }
 
-/* Layout */
+h1 {
+    font-size: 3.5rem;
+    color: #d1e8e2;
+    text-shadow: 0 0 10px #19a186; 
+}
+
+h2 {
+    font-size: 3rem;
+    color: #d1e8e2;
+    text-shadow: 0 0 10px #19a186; 
+}
+
+h3 {
+    font-size: 2rem;
+    color: #89c9b8
+}
+
+p, a, li {
+    font-size: 1rem; 
+    line-height: 1.6;
+}
+/* HEADER */
 header {
     background: #062626;
-    padding: 20px;
     text-align: center;
+    top: 0;
+    z-index: 100;
+    width: 100%;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 100px;
 }
 
 nav ul li {
+    margin: 30px 20px 10px;
     display: inline;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
 }
 
 nav ul li a {
@@ -52,74 +82,236 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* ------------- HERO ---------------*/
-#hero {
-    text-align: center;
-    padding: 50px 20px;
-    margin: 0 20vw;
-    background-color: #5a2f2f;
-
-}
-
-.cta-button {
-    display: inline-block;
-    background: #1e635c;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+nav ul li a:hover {
+    color: #70f5d1;
     font-weight: bold;
 }
 
-.cta-button:hover {
-    background: #2a8473;
-    box-shadow: 0 0 20px #2a8473;
-    text-shadow: 0 0 5px #233d38;
+header img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-top: -20px;
 }
 
-/* Responsive Design */
+/* ------------- Sections ---------------*/
+#hero, #about, #speakers, #venue, #registration {
+    padding: 0px 5% 50px;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: #062626;
+
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         align-items: center;
     }
+    h1 {
+        font-size: 2rem; 
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p, a, li {
+        font-size: 0.9rem; 
+    }
 }
+
+#logo{
+    max-width: 50%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto 0; 
+}
+
+@media (max-width: 768px) {
+    #logo img {
+        max-width: 80%; 
+    }
+}
+
+
+/* ------------- HERO ---------------*/
+
+#hero{
+    text-align: center;
+    border-radius: 30px 30px 0 0;
+    padding-top: 40px;
+}
+
+.join-button {
+    display: inline-block;
+    background: #1e635c;
+    color: a1b8b2;
+    padding: 10px 100px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#hero a{
+    font-size: 1.5rem;
+}
+
+.join-button:hover {
+    transition: 0.5s ease, padding 0.5s ease; 
+    background: #2a8473;
+    box-shadow: 0 0 50px #21685b;
+    text-shadow: 0 0 50px #00ffcc;
+    color: white;
+}
+
+#timer {
+    font-size: 2rem;
+    color: #d1e8e2;
+    margin-bottom: 20px;
+}
+
+
 
 /* ------------- ABOUT ---------------*/
-
-#about {
-    padding: 50px 30px;
-    margin: 0 20vw;
-    background-color: #5a2f2f;
+/* Rules List */
+.rules-list {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 20px 0;
+    text-align: left; /* Align text to the left */
 }
 
+.rules-list li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* Align text with the icon */
+    color: #d1e8e2;
+}
+
+.rule-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    background-color: #1e635c;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%; /* Make the icon circular */
+    font-size: 1rem;
+}
+
+#theme {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto 0; 
+}
 
 /* ------------- SPEAKER ---------------*/
-#speakers {
-    padding: 50px 30px;
-    margin: 0 20vw;
-    background-color: #5a2f2f;
+#speakers img{
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 10px auto 0; 
 }
-
 
 
 /* ------------- VENUE ---------------*/
-#venue {
-    padding: 50px 30px;
-    margin: 0 20vw;
-    background-color: #5a2f2f;
+#venue{
+
 }
 
+/* Schedule Table */
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 20px 0;
+    color: #d1e8e2; 
+    text-align: left; 
+    border: 1px solid #89c9b8; 
+}
 
+table th, table td {
+    padding: 15px; 
+    border: 1px solid #89c9b8;
+}
 
+table th {
+    background-color: #1e635c; 
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase; 
+}
+
+table tr:hover {
+    color: #ffffff; 
+}
+
+table td {
+    vertical-align: top; 
+}
 /* ------------- REGISTRATION ---------------*/
-#registration {
-    padding: 50px 30px;
-    margin: 0 20vw;
-    background-color: #5a2f2f;
+#registration form {
+    max-width: 500px;
 }
 
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #d1e8e2;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #89c9b8;
+    border-radius: 5px;
+    background-color: #041b1b;
+    color: #d1e8e2;
+}
+
+.form-group input::placeholder {
+    color: #89c9b8;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2a8473;
+    box-shadow: 0 0 5px #2a8473;
+}
+
+.submit-button {
+    background-color: #1e635c;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #2a8473;
+    box-shadow: 0 0 10px #2a8473;
+}
 /* ------------- FOOTER ---------------*/
 footer {
-    background: #062626;
+    background: #041b1b;
     text-align: center;
 }
